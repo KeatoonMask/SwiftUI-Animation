@@ -18,15 +18,32 @@ struct Spinner: View {
     @State var circleStart: CGFloat = 0.0
     @State var circleEnd: CGFloat = 0.03
 
+    @State var circleEndB: CGFloat = 0.03
+
     @State var rotationDegree: Angle = Angle.degrees(270)
+    @State var rotationDegreeB: Angle = Angle.degrees(270)
+    @State var rotationDegreeC: Angle = Angle.degrees(270)
 
     var body: some View {
         ZStack {
             Circle()
+                .trim(from: circleStart, to: circleEndB)
+                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                .fill(Color.green)
+                .rotationEffect(self.rotationDegreeC)
+
+            Circle()
+                .trim(from: circleStart, to: circleEndB)
+                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                .fill(Color.orange)
+                .rotationEffect(self.rotationDegreeB)
+
+            Circle()
                 .trim(from: circleStart, to: circleEnd)
-                .stroke(style: StrokeStyle(lineWidth: 15, lineCap: .round))
+                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
                 .fill(Color.blue)
                 .rotationEffect(self.rotationDegree)
+
         }.frame(width: 200, height: 200)
         .onAppear() {
             //self.animateLoader()
@@ -43,22 +60,37 @@ struct Spinner: View {
 
     func animateLoader() {
         Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: false) { _ in
-            withAnimation(Animation.easeOut(duration: self.animationDuration)) {
+            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
                 self.circleEnd = 1.0
             }
         }
 
         Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration * 0.985, repeats: false) { _ in
-            withAnimation(Animation.easeOut(duration: self.animationDuration)) {
+            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
                 self.rotationDegree += self.getRotationAngle()
+                self.circleEndB = 0.8
+            }
+        }
+
+        Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration * 1.035, repeats: false) { _ in
+            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
+                self.rotationDegreeB += self.getRotationAngle()
+            }
+        }
+
+        Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration * 1.15, repeats: false) { _ in
+            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
+                self.rotationDegreeC += self.getRotationAngle()
             }
         }
 
         Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration, repeats: false) { _ in
-            withAnimation(Animation.easeOut(duration: self.animationDuration)) {
+            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
                 self.circleEnd = 0.03
+                self.circleEndB = 0.03
             }
         }
+
     }
 }
 

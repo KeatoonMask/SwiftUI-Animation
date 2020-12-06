@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Spinner()
         }
     }
 }
