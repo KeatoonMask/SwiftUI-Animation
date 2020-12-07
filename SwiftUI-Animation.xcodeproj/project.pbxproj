@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D55C48E0257E4A1B002675A2 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48DF257E4A1B002675A2 /* SpinnerView.swift */; };
+		D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48E3257E5450002675A2 /* GlobalHelpers.swift */; };
 		D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */; };
 		D5F0B60E256DAA10003429E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B60D256DAA10003429E4 /* ContentView.swift */; };
 		D5F0B610256DAA13003429E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0B60F256DAA13003429E4 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D55C48DF257E4A1B002675A2 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		D55C48E3257E5450002675A2 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		D5F0B608256DAA10003429E4 /* SwiftUI-Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AnimationApp.swift; sourceTree = "<group>"; };
 		D5F0B60D256DAA10003429E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D55C48E2257E542B002675A2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D55C48E3257E5450002675A2 /* GlobalHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D5F0B5FF256DAA10003429E4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +66,7 @@
 		D5F0B60A256DAA10003429E4 /* SwiftUI-Animation */ = {
 			isa = PBXGroup;
 			children = (
+				D55C48E2257E542B002675A2 /* Helpers */,
 				D5F0B61B256DAA3E003429E4 /* Animations */,
 				D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */,
 				D5F0B60D256DAA10003429E4 /* ContentView.swift */,
@@ -76,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F0B61C256DAA4E003429E4 /* Spinner.swift */,
+				D55C48DF257E4A1B002675A2 /* SpinnerView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -151,6 +165,8 @@
 			files = (
 				D5F0B60E256DAA10003429E4 /* ContentView.swift in Sources */,
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
+				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
+				D55C48E0257E4A1B002675A2 /* SpinnerView.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

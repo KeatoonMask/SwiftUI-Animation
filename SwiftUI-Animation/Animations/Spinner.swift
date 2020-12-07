@@ -8,94 +8,89 @@
 import SwiftUI
 
 struct Spinner: View {
-    let circleTrackGradient = LinearGradient(gradient: .init(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .bottomLeading)
-    let circleRoundGradient = LinearGradient(gradient: .init(colors: [Color.yellow, Color.blue]), startPoint: .topLeading, endPoint: .trailing)
 
-    let trackerRotation: Double = 2
-    let animationDuration: Double = 0.75
+    let rotationTime: Double = 0.75
+    let fullRotation: Angle = .degrees(360)
+    static let initialDegree: Angle = .degrees(270)
 
-    @State var isAnimating: Bool = false
-    @State var circleStart: CGFloat = 0.0
-    @State var circleEnd: CGFloat = 0.03
+    @State var spinnerStart: CGFloat = 0.0
+    @State var spinnerEndS1: CGFloat = 0.03
+    @State var spinnerEndS2S3: CGFloat = 0.03
 
-    @State var circleEndB: CGFloat = 0.03
-
-    @State var rotationDegree: Angle = Angle.degrees(270)
-    @State var rotationDegreeB: Angle = Angle.degrees(270)
-    @State var rotationDegreeC: Angle = Angle.degrees(270)
+    @State var rotationDegreeS1 = initialDegree
+    @State var rotationDegreeS2 = initialDegree
+    @State var rotationDegreeS3 = initialDegree
 
     var body: some View {
         ZStack {
-            Circle()
-                .trim(from: circleStart, to: circleEndB)
-                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                .fill(Color.green)
-                .rotationEffect(self.rotationDegreeC)
+            // S3
+            SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS3, color: darkViolet)
 
-            Circle()
-                .trim(from: circleStart, to: circleEndB)
-                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                .fill(Color.orange)
-                .rotationEffect(self.rotationDegreeB)
+            // S2
+            SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS2, color: darkPink)
 
-            Circle()
-                .trim(from: circleStart, to: circleEnd)
-                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                .fill(Color.blue)
-                .rotationEffect(self.rotationDegree)
+            // S1
+            SpinnerCircle(start: spinnerStart, end: spinnerEndS1, rotation: rotationDegreeS1, color: darkBlue)
 
         }.frame(width: 200, height: 200)
         .onAppear() {
-            //self.animateLoader()
-            Timer.scheduledTimer(withTimeInterval: self.trackerRotation * self.animationDuration + (self.animationDuration), repeats: true) { (mainTimer) in
-                self.animateLoader()
+            Timer.scheduledTimer(withTimeInterval: (rotationTime * 2) + 0.35, repeats: true) { (mainTimer) in
+                self.animateSpinner()
             }
         }
     }
 
-    // MARK:- functions
-    func getRotationAngle() -> Angle {
-        return .degrees(360)
+    // MARK: Animation methods
+    func animateSpinner(with duration: Double, completion: @escaping (() -> Void)) {
+        Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { _ in
+            withAnimation(Animation.easeInOut(duration: self.rotationTime)) {
+                completion()
+            }
+        }
     }
 
-    func animateLoader() {
-        Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: false) { _ in
-            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
-                self.circleEnd = 1.0
-            }
+    func animateSpinner() {
+        animateSpinner(with: rotationTime) { self.spinnerEndS1 = 1.0 }
+
+        animateSpinner(with: (rotationTime * 2) - 0.025) {
+            self.rotationDegreeS1 += fullRotation
+            self.spinnerEndS2S3 = 0.8
         }
 
-        Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration * 0.985, repeats: false) { _ in
-            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
-                self.rotationDegree += self.getRotationAngle()
-                self.circleEndB = 0.8
-            }
+        animateSpinner(with: (rotationTime * 2)) {
+            self.spinnerEndS1 = 0.03
+            self.spinnerEndS2S3 = 0.03
         }
 
-        Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration * 1.035, repeats: false) { _ in
-            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
-                self.rotationDegreeB += self.getRotationAngle()
-            }
-        }
+        animateSpinner(with: (rotationTime * 2) + 0.0525) { self.rotationDegreeS2 += fullRotation }
 
-        Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration * 1.15, repeats: false) { _ in
-            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
-                self.rotationDegreeC += self.getRotationAngle()
-            }
-        }
+        animateSpinner(with: (rotationTime * 2) + 0.225) { self.rotationDegreeS3 += fullRotation }
+    }
+}
 
-        Timer.scheduledTimer(withTimeInterval: trackerRotation * animationDuration, repeats: false) { _ in
-            withAnimation(Animation.easeInOut(duration: self.animationDuration)) {
-                self.circleEnd = 0.03
-                self.circleEndB = 0.03
-            }
-        }
+// MARK: SpinnerCircle
 
+struct SpinnerCircle: View {
+    var start: CGFloat
+    var end: CGFloat
+    var rotation: Angle
+    var color: Color
+
+    var body: some View {
+        Circle()
+            .trim(from: start, to: end)
+            .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
+            .fill(color)
+            .rotationEffect(rotation)
     }
 }
 
 struct Spinner_Previews: PreviewProvider {
     static var previews: some View {
-        Spinner()
+        ZStack {
+            Color(red: 41/255, green: 42/255, blue: 48/255)
+                .edgesIgnoringSafeArea(.all)
+            Spinner()
+        }
     }
 }
