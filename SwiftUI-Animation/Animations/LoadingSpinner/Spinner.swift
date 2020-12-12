@@ -2,7 +2,7 @@
 //  Spinner.swift
 //  SwiiftUI-Animation
 //
-//  Created by Serafín Ennes Moscoso on 24/11/2020.
+//  Created by Finsi Ennes on 24/11/2020.
 //
 
 import SwiftUI
@@ -10,6 +10,7 @@ import SwiftUI
 struct Spinner: View {
 
     let rotationTime: Double = 0.75
+    let animationTime: Double = 1.9 // Sum of all animation times
     let fullRotation: Angle = .degrees(360)
     static let initialDegree: Angle = .degrees(270)
 
@@ -23,18 +24,23 @@ struct Spinner: View {
 
     var body: some View {
         ZStack {
-            // S3
-            SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS3, color: darkViolet)
+            darkGray
+                .edgesIgnoringSafeArea(.all)
 
-            // S2
-            SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS2, color: darkPink)
+            ZStack {
+                // S3
+                SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS3, color: darkViolet)
 
-            // S1
-            SpinnerCircle(start: spinnerStart, end: spinnerEndS1, rotation: rotationDegreeS1, color: darkBlue)
+                // S2
+                SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS2, color: darkPink)
 
-        }.frame(width: 200, height: 200)
+                // S1
+                SpinnerCircle(start: spinnerStart, end: spinnerEndS1, rotation: rotationDegreeS1, color: darkBlue)
+
+            }.frame(width: 200, height: 200)
+        }
         .onAppear() {
-            Timer.scheduledTimer(withTimeInterval: (rotationTime * 2) + 0.35, repeats: true) { (mainTimer) in
+            Timer.scheduledTimer(withTimeInterval: animationTime, repeats: true) { (mainTimer) in
                 self.animateSpinner()
             }
         }
@@ -88,8 +94,6 @@ struct SpinnerCircle: View {
 struct Spinner_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color(red: 41/255, green: 42/255, blue: 48/255)
-                .edgesIgnoringSafeArea(.all)
             Spinner()
         }
     }

@@ -2,7 +2,7 @@
 //  GlobalHelpers.swift
 //  SwiftUI-Animation
 //
-//  Created by Serafín Ennes Moscoso on 07/12/2020.
+//  Created by Finsi Ennes on 07/12/2020.
 //
 
 import Foundation

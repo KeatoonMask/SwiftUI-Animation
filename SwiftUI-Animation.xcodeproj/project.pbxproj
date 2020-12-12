@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D55C48E0257E4A1B002675A2 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48DF257E4A1B002675A2 /* SpinnerView.swift */; };
 		D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48E3257E5450002675A2 /* GlobalHelpers.swift */; };
 		D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */; };
 		D5F0B60E256DAA10003429E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B60D256DAA10003429E4 /* ContentView.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D55C48DF257E4A1B002675A2 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		D55C48E3257E5450002675A2 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		D5F0B608256DAA10003429E4 /* SwiftUI-Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AnimationApp.swift; sourceTree = "<group>"; };
@@ -39,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D55BE4612584FBD70098598D /* LoadingSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0B61C256DAA4E003429E4 /* Spinner.swift */,
+			);
+			path = LoadingSpinner;
+			sourceTree = "<group>";
+		};
 		D55C48E2257E542B002675A2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,8 +72,8 @@
 		D5F0B60A256DAA10003429E4 /* SwiftUI-Animation */ = {
 			isa = PBXGroup;
 			children = (
-				D55C48E2257E542B002675A2 /* Helpers */,
 				D5F0B61B256DAA3E003429E4 /* Animations */,
+				D55C48E2257E542B002675A2 /* Helpers */,
 				D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */,
 				D5F0B60D256DAA10003429E4 /* ContentView.swift */,
 				D5F0B60F256DAA13003429E4 /* Assets.xcassets */,
@@ -88,8 +94,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				D5F0B61C256DAA4E003429E4 /* Spinner.swift */,
-				D55C48DF257E4A1B002675A2 /* SpinnerView.swift */,
+				D55BE4612584FBD70098598D /* LoadingSpinner */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -166,7 +171,6 @@
 				D5F0B60E256DAA10003429E4 /* ContentView.swift in Sources */,
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
 				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
-				D55C48E0257E4A1B002675A2 /* SpinnerView.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animation/Preview Content\"";
-				DEVELOPMENT_TEAM = 2SNP4C8GTH;
+				DEVELOPMENT_TEAM = JM8BMXQ5NG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-Animation/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -319,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animation/Preview Content\"";
-				DEVELOPMENT_TEAM = 2SNP4C8GTH;
+				DEVELOPMENT_TEAM = JM8BMXQ5NG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-Animation/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
