@@ -19,6 +19,7 @@ If you are interested in my work and would like to see more content, remember gi
 ## Animations
 
 #### Loading Spinner
+* Tutorial: [https://ennes-finsi.medium.com/swiftui-animations-loading-spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
 ![Loading Spinner Preview](https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif)
 
 ## Credits
