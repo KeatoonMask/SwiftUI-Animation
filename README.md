@@ -6,24 +6,49 @@ Animations built using SwiftUI framework.
 [![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
 ![Repository size](https://img.shields.io/github/repo-size/KeatoonMask/SwiftUI-Animation)
 
-Since SwiftUI appeared, the way of writing UI code has change. It provide us lot of features to develop our creativity. One of this features is related with animating state transitions. 
+Since SwiftUI appeared, the way of writing UI code has change. It provides us lot of features to develop our creativity. One of this features is related with animating state transitions. 
 
-In this repository you will find several animations using this framework and based on aesthetic designs.
+This repo containes several SwiftUI animations based on aesthetic designs.
 
-If you are interested in my work and would like to see more content, remember give a star and share 🙂
+If you like my work and want to see more content, remember give a star and share 🙂
+
+## Prerequisites
+
+* A Mac running **macOS Mojave** (10.14.4) or later.
+* **Xcode** 11 or later.
+* **iOS 13** or later in case of running it in a device.
+
+## Installation
+
+Installation is pretty simple:
+1. Clone the repo
+   ```sh
+   git clone git@github.com:KeatoonMask/SwiftUI-Animation.git
+   ```
+2. Select your Team (*Main Project > Signing and Capabilities > Team*)
+3. Select a device or simulator for the build.
+4. Run it!
 
 ## Reach me via
-* **Medium**:  [**@ennes.finsi**](https://medium.com/@ennes.finsi)
+* **Medium**:  [**@ennes.finsi**](https://finsi-ennes.medium.com/)
 * **Instagram**:  [**@finsi.code**](https://www.instagram.com/finsi.code/)
 
 ## Animations
 
 #### Loading Spinner
-* Tutorial: [https://ennes-finsi.medium.com/swiftui-animations-loading-spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
+* [Design](https://dribbble.com/shots/7888464-Spinner)
+* Tutorial: [SwiftUI Animations - Loading Spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif" />
 </p>
+
+#### Download button
+* [Design](https://dribbble.com/shots/12636180-Download-button)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" />
+</p>
+
 
 ## Credits
 © Finsi Ennes | 2020

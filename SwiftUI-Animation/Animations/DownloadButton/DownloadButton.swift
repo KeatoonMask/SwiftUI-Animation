@@ -22,6 +22,10 @@ struct DownloadButton: View {
     private var progressBarAnimationTime: TimeInterval = 2.4
 
     var body: some View {
+        ZStack {
+            darkGray
+                .edgesIgnoringSafeArea(.all)
+
             VStack(spacing: 2) {
                 Text("Open file")
                     .font(.title)
@@ -56,6 +60,7 @@ struct DownloadButton: View {
                     download()
                 }
             }
+        }
     }
 
     func download() {
@@ -69,11 +74,6 @@ struct DownloadButton: View {
 
 struct DownloadButton_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            darkGray
-                .edgesIgnoringSafeArea(.all)
-
-            DownloadButton()
-        }
+        DownloadButton()
     }
 }
