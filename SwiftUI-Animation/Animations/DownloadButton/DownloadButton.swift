@@ -15,104 +15,65 @@ enum DownloadStatus {
 
 struct DownloadButton: View {
 
-    static public var width: CGFloat = 250
-
-    @State private var runCount = 0
-
-    @State private var isDownloading = false
-    @State private var isDownloaded = false
-    @State private var downloadDuration: TimeInterval = 1.2
-
     @State private var status: DownloadStatus = .ready
 
-    @State var progressBarWidth: CGFloat = 0
-
+    private var progressBarWidth: CGFloat = 250
+    private var animationTime: TimeInterval = 0.3
+    private var progressBarAnimationTime: TimeInterval = 2.4
 
     var body: some View {
-        VStack {
-            Text("Open file")
-                .opacity(isDownloaded ? 1 : 0)
-                .animation(.easeOut(duration: 0.45))
+            VStack(spacing: 2) {
+                Text("Open file")
+                    .font(.title)
+                    .foregroundColor(darkBlue)
+                    .opacity((status == .finished) ? 1 : 0)
+                    .animation(.easeOut(duration: animationTime))
 
-            // Progress Bar
-            ZStack {
-                RoundedRectangle(cornerRadius: 20, style: .circular)
-                    .fill(Color.gray)
-                    .frame(height: (status == .ready) ? 80 : 12)
-                    .animation(.easeIn(duration: 0.4))
-
-                HStack {
+                // Progress Bar
+                ZStack {
                     RoundedRectangle(cornerRadius: 20, style: .circular)
-                        .fill(Color.blue)
-                        .frame(width: progressBarWidth, height: 12)
-                        .animation(.linear(duration: 0.5))
+                        .fill(darkPink)
+                        .frame(height: (status == .ready) ? 80 : 12)
+                        .animation(.easeIn(duration: animationTime))
 
-                    Spacer()
+                    HStack {
+                        RoundedRectangle(cornerRadius: 20, style: .circular)
+                            .fill((status == .finished) ? darkBlue : darkViolet)
+                            .frame(height: 12)
+                            .animation(.easeIn(duration: (status == .finished) ? animationTime : progressBarAnimationTime))
+
+                        Spacer()
+                            .frame(width:(status == .ready) ? progressBarWidth : 0)
+                    }
+
+                    Text("Download")
+                        .font(.system(size: 26, weight: .bold))
+                        .foregroundColor(.white)
+                        .opacity((status == .ready) ? 1 : 0)
+                        .animation(.easeOut(duration: animationTime - 0.1))
+                }.frame(width: (status == .finished) ? 150 : progressBarWidth)
+                .onTapGesture {
+                    download()
                 }
-
-                Text("Download")
-                    .opacity((status == .ready) ? 1 : 0)
-                    .animation(.easeOut(duration: 0.4))
-            }.frame(width: 250)
-            .onTapGesture {
-                download()
             }
-
-        }
     }
 
     func download() {
         // Download starts
         status = .started
-        withAnimation {
-            self.isDownloading.toggle()
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                runCount += 1
-                progressBarWidth = (25 * CGFloat(runCount) * DownloadButton.width) / 100
-
-                if runCount == 4 {
-                    status = .finished
-                }
-            }
+        Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { timer in
+                status = .finished
         }
-    }
-}
-
-struct ProgressBar: View {
-
-    var height: CGFloat
-    var progress: Int = 0
-
-    var progressBarWidth: CGFloat {
-        guard isOn else { return 0.0 }
-        return (CGFloat(progress) * DownloadButton.width) / 100
-    }
-
-    @State private var isOn = false
-
-    var body: some View {
-            ZStack {
-                RoundedRectangle(cornerRadius: 20, style: .circular)
-                    .fill(Color.gray)
-                    .frame(height: isOn ? 12 : 80)
-
-                HStack {
-                    RoundedRectangle(cornerRadius: 20, style: .circular)
-                        .fill(Color.blue)
-                        .frame(width: progressBarWidth, height: 12)
-
-                    Spacer()
-                }
-
-                Text("Download")
-                    .opacity(isOn ? 0 : 1)
-                    .animation(.easeOut(duration: 0.45))
-            }
     }
 }
 
 struct DownloadButton_Previews: PreviewProvider {
     static var previews: some View {
-        DownloadButton()
+        ZStack {
+            darkGray
+                .edgesIgnoringSafeArea(.all)
+
+            DownloadButton()
+        }
     }
 }
