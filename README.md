@@ -40,14 +40,14 @@ Installation is pretty simple:
 * Tutorial: [SwiftUI Animations - Loading Spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif" />
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif" height="240"/>
 </p>
 
 #### Download button
 * [Design](https://dribbble.com/shots/12636180-Download-button)
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" />
-</p>
+<video height="240" autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.mov" type="video/mov" />
+</video>
 
 
 ## Credits
