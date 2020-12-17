@@ -45,9 +45,11 @@ Installation is pretty simple:
 
 #### Download button
 * [Design](https://dribbble.com/shots/12636180-Download-button)
-<video height="240" autoplay loop muted>
-  <source src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.mov" type="video/mov" />
-</video>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" height="240"/>
+</p>
+
 
 
 ## Credits
