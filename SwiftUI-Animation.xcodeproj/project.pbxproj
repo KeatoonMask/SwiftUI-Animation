@@ -63,6 +63,18 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D5D530D1258B806D006F20B6 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */,
+				D5F0B60D256DAA10003429E4 /* ContentView.swift */,
+				D5F0B60F256DAA13003429E4 /* Assets.xcassets */,
+				D5F0B614256DAA13003429E4 /* Info.plist */,
+				D5F0B611256DAA13003429E4 /* Preview Content */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
 		D5F0B5FF256DAA10003429E4 = {
 			isa = PBXGroup;
 			children = (
@@ -82,13 +94,9 @@
 		D5F0B60A256DAA10003429E4 /* SwiftUI-Animation */ = {
 			isa = PBXGroup;
 			children = (
+				D5D530D1258B806D006F20B6 /* Build */,
 				D5F0B61B256DAA3E003429E4 /* Animations */,
 				D55C48E2257E542B002675A2 /* Helpers */,
-				D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */,
-				D5F0B60D256DAA10003429E4 /* ContentView.swift */,
-				D5F0B60F256DAA13003429E4 /* Assets.xcassets */,
-				D5F0B614256DAA13003429E4 /* Info.plist */,
-				D5F0B611256DAA13003429E4 /* Preview Content */,
 			);
 			path = "SwiftUI-Animation";
 			sourceTree = "<group>";
@@ -312,10 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animation/Build/Preview Content\"";
 				DEVELOPMENT_TEAM = JM8BMXQ5NG;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI-Animation/Info.plist";
+				INFOPLIST_FILE = "SwiftUI-Animation/Build/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,10 +342,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Animation/Build/Preview Content\"";
 				DEVELOPMENT_TEAM = JM8BMXQ5NG;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI-Animation/Info.plist";
+				INFOPLIST_FILE = "SwiftUI-Animation/Build/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
