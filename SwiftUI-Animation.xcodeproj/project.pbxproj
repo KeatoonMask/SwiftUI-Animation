@@ -14,6 +14,7 @@
 		D5F0B610256DAA13003429E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0B60F256DAA13003429E4 /* Assets.xcassets */; };
 		D5F0B613256DAA13003429E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0B612256DAA13003429E4 /* Preview Assets.xcassets */; };
 		D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B61C256DAA4E003429E4 /* Spinner.swift */; };
+		D5FCC7C7258E239B00830430 /* ShippingTruckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCC7C6258E239B00830430 /* ShippingTruckView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D5F0B612256DAA13003429E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5F0B614256DAA13003429E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5F0B61C256DAA4E003429E4 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		D5FCC7C6258E239B00830430 /* ShippingTruckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingTruckView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +114,19 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D5FCC7C5258E236100830430 /* CompleteOrderButton */,
 				D55BE46425862F4F0098598D /* DownloadButton */,
 				D55BE4612584FBD70098598D /* LoadingSpinner */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		D5FCC7C5258E236100830430 /* CompleteOrderButton */ = {
+			isa = PBXGroup;
+			children = (
+				D5FCC7C6258E239B00830430 /* ShippingTruckView.swift */,
+			);
+			path = CompleteOrderButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
 				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
+				D5FCC7C7258E239B00830430 /* ShippingTruckView.swift in Sources */,
 				D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
