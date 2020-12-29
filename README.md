@@ -50,6 +50,13 @@ Installation is pretty simple:
   <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" height="240"/>
 </p>
 
+#### Order button
+* [Inspired by](https://dribbble.com/shots/12636180-Download-button)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/orderButton.gif" height="240"/>
+</p>
+
 ## Credits
 © Finsi Ennes | 2020
 

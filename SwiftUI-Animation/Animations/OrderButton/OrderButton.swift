@@ -30,10 +30,6 @@ struct OrderButton: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                // Shipping truck animation
-
-
-                // Progress Bar
                 ZStack {
                     VStack {
                         HStack {
@@ -73,7 +69,7 @@ struct OrderButton: View {
                     }.frame(width:(status == .finished) ? 80 : progressBarWidth)
 
                     if status != .finished {
-                        Text("COMPLETE ORDER")
+                        Text("Complete Order")
                             .font(.system(size: 25, weight: .bold))
                             .foregroundColor(.white)
                             .opacity((status == .started || showShippingTruck) ? 0 : 1)

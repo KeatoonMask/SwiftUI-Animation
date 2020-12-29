@@ -10,6 +10,7 @@
 		D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BE46525862F6A0098598D /* DownloadButton.swift */; };
 		D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48E3257E5450002675A2 /* GlobalHelpers.swift */; };
 		D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562AEDF2594ADE7006F670D /* OrderButton.swift */; };
+		D5823BF4259A5DA200C81EDE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5823BF3259A5DA200C81EDE /* ProgressBar.swift */; };
 		D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */; };
 		D5F0B60E256DAA10003429E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0B60D256DAA10003429E4 /* ContentView.swift */; };
 		D5F0B610256DAA13003429E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0B60F256DAA13003429E4 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		D55BE46525862F6A0098598D /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
 		D55C48E3257E5450002675A2 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		D562AEDF2594ADE7006F670D /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
+		D5823BF3259A5DA200C81EDE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		D5F0B608256DAA10003429E4 /* SwiftUI-Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0B60B256DAA10003429E4 /* SwiftUI_AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AnimationApp.swift; sourceTree = "<group>"; };
 		D5F0B60D256DAA10003429E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D543A75425974B2400C048DF /* Checkmark */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkmark;
+			sourceTree = "<group>";
+		};
 		D55BE4612584FBD70098598D /* LoadingSpinner */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				D55BE46525862F6A0098598D /* DownloadButton.swift */,
+				D5823BF3259A5DA200C81EDE /* ProgressBar.swift */,
 			);
 			path = DownloadButton;
 			sourceTree = "<group>";
@@ -114,6 +124,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D543A75425974B2400C048DF /* Checkmark */,
 				D5FCC7C5258E236100830430 /* OrderButton */,
 				D55BE46425862F4F0098598D /* DownloadButton */,
 				D55BE4612584FBD70098598D /* LoadingSpinner */,
@@ -204,6 +215,7 @@
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 				D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */,
 				D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */,
+				D5823BF4259A5DA200C81EDE /* ProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
