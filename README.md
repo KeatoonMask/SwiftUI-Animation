@@ -35,6 +35,12 @@ Installation is pretty simple:
 
 ## Animations
 
+#### Checkmark
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/checkmark.gif" height="240"/>
+</p>
+
 #### Loading Spinner
 * [Design](https://dribbble.com/shots/7888464-Spinner)
 * Tutorial: [SwiftUI Animations - Loading Spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
