@@ -17,6 +17,8 @@ struct DownloadButton: View {
 
     @State private var status: DownloadStatus = .ready
 
+    @State var progress: CGFloat = 0.0
+
     private var progressBarWidth: CGFloat = 250
     private var animationTime: TimeInterval = 0.3
     private var progressBarAnimationTime: TimeInterval = 2.4
@@ -33,29 +35,18 @@ struct DownloadButton: View {
                     .opacity((status == .finished) ? 1 : 0)
                     .animation(.easeOut(duration: animationTime))
 
-                // Progress Bar
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20, style: .circular)
-                        .fill(darkPink)
+                    ProgressBar(initialProgress: $progress, color: darkBlue)
                         .frame(height: (status == .ready) ? 80 : 12)
                         .animation(.easeIn(duration: animationTime))
-
-                    HStack {
-                        RoundedRectangle(cornerRadius: 20, style: .circular)
-                            .fill((status == .finished) ? darkBlue : darkViolet)
-                            .frame(height: 12)
-                            .animation(.easeIn(duration: (status == .finished) ? animationTime : progressBarAnimationTime))
-
-                        Spacer()
-                            .frame(width:(status == .ready) ? progressBarWidth : 0)
-                    }
-
+                    
                     Text("Download")
                         .font(.system(size: 26, weight: .bold))
                         .foregroundColor(.white)
                         .opacity((status == .ready) ? 1 : 0)
                         .animation(.easeOut(duration: animationTime - 0.1))
-                }.frame(width: (status == .finished) ? 150 : progressBarWidth)
+                }
+                .frame(width: (status == .finished) ? 150 : progressBarWidth)
                 .onTapGesture {
                     download()
                 }
@@ -66,8 +57,14 @@ struct DownloadButton: View {
     func download() {
         // Download starts
         status = .started
-        Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { timer in
-                status = .finished
+
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+            self.progress += 0.1
+            if self.progress >= 1.0 {
+                Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+                    status = .finished
+                }
+            }
         }
     }
 }
