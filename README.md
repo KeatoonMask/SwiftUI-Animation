@@ -66,7 +66,7 @@ Installation is pretty simple:
 #### Music player
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/musicPlayer.gif" height="720"/>
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/musicPlayer.gif" height="480"/>
 </p>
 
 ## Credits
