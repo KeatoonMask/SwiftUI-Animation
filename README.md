@@ -37,37 +37,27 @@ Installation is pretty simple:
 
 #### Checkmark
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/checkmark.gif" height="240"/>
-</p>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/checkmark.gif" height="240"/>
 
 #### Loading Spinner
 * [Design](https://dribbble.com/shots/7888464-Spinner)
 * Tutorial: [SwiftUI Animations - Loading Spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif" height="240"/>
-</p>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif" height="240"/>
 
 #### Download button
 * [Design](https://dribbble.com/shots/12636180-Download-button)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" height="240"/>
-</p>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" height="240"/>
 
 #### Order button
 * [Inspired by](https://dribbble.com/shots/12636180-Download-button)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/orderButton.gif" height="240"/>
-</p>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/orderButton.gif" height="240"/>
 
 #### Music player
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/musicPlayer.gif" height="480"/>
-</p>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/musicPlayer.gif" height="480"/>
 
 ## Credits
 © Finsi Ennes | 2020
