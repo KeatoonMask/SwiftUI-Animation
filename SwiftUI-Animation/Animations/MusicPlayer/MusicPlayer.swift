@@ -10,6 +10,7 @@ import SwiftUI
 struct MusicPlayer: View {
     @Namespace private var playerAnimation
     @State private var showsDetails = true
+    @State private var showsControls = true
 
     @State var progress: CGFloat = 0.65
 
@@ -70,33 +71,38 @@ struct MusicPlayer: View {
                         Spacer()
                     }
 
-                    ProgressBar(initialProgress:$progress, color: .white)
-                        .frame(height: 8)
-                        .padding([.leading, .trailing], 44)
+                    VStack {
+                        ProgressBar(initialProgress:$progress, color: .white)
+                            .frame(height: 8)
+                            .padding([.leading, .trailing], 44)
 
-                    HStack {
-                        Image(systemName: "arrow.left.to.line.alt")
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .padding()
+                        HStack {
+                            Image(systemName: "arrow.left.to.line.alt")
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .padding()
 
-                        Image(systemName: "play.circle.fill")
-                            .font(.system(size: 50))
-                            .foregroundColor(.white)
-                            .padding()
+                            Image(systemName: "play.circle.fill")
+                                .font(.system(size: 50))
+                                .foregroundColor(.white)
+                                .padding()
 
-                        Image(systemName: "arrow.right.to.line.alt")
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .padding()
-                    }
-
+                            Image(systemName: "arrow.right.to.line.alt")
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .padding()
+                        }
+                    }.opacity(showsControls ? 1 : 0)
+                    .animation(.easeIn)
                     Spacer()
                 }
             }
             .onTapGesture {
-                withAnimation(.spring()) {
-                    self.showsDetails.toggle()
+                showsControls.toggle()
+                Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { timer in
+                    withAnimation(.spring()) {
+                        self.showsDetails.toggle()
+                    }
                 }
             }
             .frame(maxWidth: .infinity)

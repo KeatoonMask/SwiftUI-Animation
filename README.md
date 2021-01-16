@@ -63,6 +63,12 @@ Installation is pretty simple:
   <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/orderButton.gif" height="240"/>
 </p>
 
+#### Music player
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/musicPlayer.gif" height="720"/>
+</p>
+
 ## Credits
 © Finsi Ennes | 2020
 
