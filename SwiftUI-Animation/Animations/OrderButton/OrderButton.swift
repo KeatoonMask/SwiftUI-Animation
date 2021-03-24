@@ -75,9 +75,6 @@ struct OrderButton: View {
                             .opacity((status == .started || showShippingTruck) ? 0 : 1)
                             .animation(.linear(duration: animationTime - 0.1))
                     }
-
-
-
                         Image(systemName: "checkmark")
                             .resizable()
                             .frame(width: 36, height: 36)

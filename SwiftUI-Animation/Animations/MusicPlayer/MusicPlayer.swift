@@ -127,5 +127,6 @@ struct MusicPlayerContentView: View {
 struct MusicPlayer_Previews: PreviewProvider {
     static var previews: some View {
         MusicPlayerContentView()
+            .previewDevice("iPhone 12")
     }
 }
