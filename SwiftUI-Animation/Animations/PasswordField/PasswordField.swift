@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PasswordField: View {
 
+    @State private var password = "finsi.code"
     @State private var showPassword = false
     
     var body: some View {
@@ -27,18 +28,33 @@ struct PasswordField: View {
                         .frame(width: showPassword ?  geo.size.width : 50, height: showPassword ?  75 : 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .animation(.linear(duration: 0.2))
                         .foregroundColor(clearGray)
+                        .padding(.trailing, showPassword ? 0 : 12)
+                }
+
+                HStack {
+                    if showPassword {
+                        TextField("Password", text: $password)
+                            .font(.headline)
+                            .foregroundColor(darkGray)
+                            .padding(.leading, 20)
+                    } else {
+                        SecureField("Password", text: $password)
+                            .foregroundColor(clearGray)
+                            .padding(.leading, 20)
+                    }
+
+                    Spacer()
+
+                    Image(systemName: showPassword ?  "eye" : "eye.slash")
+                        .resizable()
+                        .frame(width: 32, height: 20)
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundColor(darkGray)
+                        .padding(.trailing, 20)
                         .onTapGesture {
                             showPassword.toggle()
                     }
-                    .padding(.trailing, showPassword ? 0 : 20)
                 }
-
-                Image(systemName: showPassword ?  "eye" : "eye.slash")
-                    .resizable()
-                    .frame(width: 32, height: 20)
-                    .offset(x: 105, y: 0)
-                    .font(.system(size: 16, weight: .heavy))
-                    .foregroundColor(darkGray)
             }
         }
     }
@@ -46,8 +62,11 @@ struct PasswordField: View {
 
 struct PasswordField_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordField()
-            .frame(width: 300)
-            .previewDevice("iPhone 12")
+        ZStack {
+            clearBlue.edgesIgnoringSafeArea(.all)
+            PasswordField()
+                .frame(width: 300)
+                .previewDevice("iPhone 12")
+        }
     }
 }

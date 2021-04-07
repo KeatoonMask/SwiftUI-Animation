@@ -11,7 +11,12 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            MusicPlayerContentView()
+            ZStack {
+                clearBlue.edgesIgnoringSafeArea(.all)
+                PasswordField()
+                    .frame(width: 300)
+                    .padding(.top, 40)
+            }
         }
     }
 }
