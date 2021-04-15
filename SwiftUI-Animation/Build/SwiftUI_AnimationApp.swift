@@ -12,10 +12,11 @@ struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                clearBlue.edgesIgnoringSafeArea(.all)
-                PasswordField()
-                    .frame(width: 300)
-                    .padding(.top, 40)
+                darkGray.edgesIgnoringSafeArea(.all)
+
+                RecButton()
+                    .frame(width: 100, height: 100)
+
             }
         }
     }
