@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D503106E260BBB06001C6434 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503106D260BBB06001C6434 /* PasswordField.swift */; };
 		D552388026277A1D0061FF61 /* RecButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552387F26277A1D0061FF61 /* RecButton.swift */; };
+		D55238F32628B3980061FF61 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55238F22628B3980061FF61 /* LikeButton.swift */; };
 		D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BE46525862F6A0098598D /* DownloadButton.swift */; };
 		D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48E3257E5450002675A2 /* GlobalHelpers.swift */; };
 		D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562AEDF2594ADE7006F670D /* OrderButton.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		D503106D260BBB06001C6434 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		D552387F26277A1D0061FF61 /* RecButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecButton.swift; sourceTree = "<group>"; };
+		D55238F22628B3980061FF61 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		D55BE46525862F6A0098598D /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
 		D55C48E3257E5450002675A2 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		D562AEDF2594ADE7006F670D /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 				D552387F26277A1D0061FF61 /* RecButton.swift */,
 			);
 			path = RecButton;
+			sourceTree = "<group>";
+		};
+		D55238F12628B3880061FF61 /* LikeButton */ = {
+			isa = PBXGroup;
+			children = (
+				D55238F22628B3980061FF61 /* LikeButton.swift */,
+			);
+			path = LikeButton;
 			sourceTree = "<group>";
 		};
 		D55BE4612584FBD70098598D /* LoadingSpinner */ = {
@@ -170,6 +180,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D55238F12628B3880061FF61 /* LikeButton */,
 				D552387E26277A050061FF61 /* RecButton */,
 				D503106C260BBAF0001C6434 /* PasswordField */,
 				D5A8633D25AF8D2D009EE54D /* MusicPlayer */,
@@ -265,6 +276,7 @@
 				D5A8630925AE5997009EE54D /* Test.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 				D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */,
+				D55238F32628B3980061FF61 /* LikeButton.swift in Sources */,
 				D552388026277A1D0061FF61 /* RecButton.swift in Sources */,
 				D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */,
 				D5823BF4259A5DA200C81EDE /* ProgressBar.swift in Sources */,
