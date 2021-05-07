@@ -29,7 +29,7 @@ struct Checkmark: View {
                     .animation(.easeIn)
             }.onTapGesture {
                 checkmark()
-            }.opacity(0)
+            }
         }
     }
 

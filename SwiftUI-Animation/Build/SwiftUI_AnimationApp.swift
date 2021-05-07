@@ -14,8 +14,8 @@ struct SwiftUI_AnimationApp: App {
             ZStack {
                 darkGray.edgesIgnoringSafeArea(.all)
 
-                RecButton()
-                    .frame(width: 100, height: 100)
+                LikeButton()
+                    .frame(width: 180, height: 100)
 
             }
         }
