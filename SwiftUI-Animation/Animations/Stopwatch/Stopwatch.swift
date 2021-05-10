@@ -10,7 +10,7 @@ import SwiftUI
 struct Stopwatch: View {
 
     /// Current progress time expresed in seconds
-    @State private var progressTime = 0
+    @State private var progressTime = 236
     @State private var isRunning = false
 
     /// Computed properties to get the progressTime in hh:mm:ss format
@@ -45,18 +45,41 @@ struct Stopwatch: View {
                 StopwatchUnit(timeUnit: seconds, timeUnitText: "SEC", color: darkGreen)
             }
 
-            Button(action: {
-                if isRunning{
-                    timer?.invalidate()
-                    timer = nil
-                } else {
-                    timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
-                        progressTime += 1
-                    })
+            HStack {
+                Button(action: {
+                    if isRunning{
+                        timer?.invalidate()
+                    } else {
+                        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+                            progressTime += 1
+                        })
+                    }
+                    isRunning.toggle()
+                }) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 15.0)
+                            .frame(width: 120, height: 50, alignment: .center)
+                            .foregroundColor(isRunning ? darkPink : darkGreen)
+
+                        Text(isRunning ? "Stop" : "Start")
+                            .font(.title)
+                            .foregroundColor(.white)
+                    }
                 }
-                isRunning.toggle()
-            }) {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+
+                Button(action: {
+                    progressTime = 0
+                }) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 15.0)
+                            .frame(width: 120, height: 50, alignment: .center)
+                            .foregroundColor(.gray)
+
+                        Text("Reset")
+                            .font(.title)
+                            .foregroundColor(.white)
+                    }
+                }
             }
         }
     }
