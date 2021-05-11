@@ -65,7 +65,7 @@ Installation is pretty simple:
 
 #### Password field
 
-<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/passwordField.gif" height="480"/>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/passwordField.gif"/>
 
 #### Music player
 
