@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PasswordField: View {
 
-    @State private var password = "finsi.code"
+    @State private var password = "password"
     @State private var showPassword = false
     
     var body: some View {
