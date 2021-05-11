@@ -67,6 +67,10 @@ Installation is pretty simple:
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/passwordField.gif"/>
 
+#### Stopwatch
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/stopwatch.gif"/>
+
 #### Music player
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/musicPlayer.gif" height="480"/>
