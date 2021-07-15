@@ -12,10 +12,15 @@ struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                darkGray.edgesIgnoringSafeArea(.all)
+                //darkGray.edgesIgnoringSafeArea(.all)
 
-                LikeButton()
-                    .frame(width: 180, height: 100)
+                VStack {
+                    Spacer()
+
+                    PageControlPreview()
+
+                    Spacer()
+                }
 
             }
         }

@@ -12,6 +12,7 @@
 		D55238F32628B3980061FF61 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55238F22628B3980061FF61 /* LikeButton.swift */; };
 		D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BE46525862F6A0098598D /* DownloadButton.swift */; };
 		D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C48E3257E5450002675A2 /* GlobalHelpers.swift */; };
+		D55EE2C0269575AC00303A9D /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EE2BF269575AC00303A9D /* PageControl.swift */; };
 		D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562AEDF2594ADE7006F670D /* OrderButton.swift */; };
 		D5823BF4259A5DA200C81EDE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5823BF3259A5DA200C81EDE /* ProgressBar.swift */; };
 		D5823C19259D0D4F00C81EDE /* Checkmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5823C18259D0D4F00C81EDE /* Checkmark.swift */; };
@@ -31,6 +32,7 @@
 		D55238F22628B3980061FF61 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		D55BE46525862F6A0098598D /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
 		D55C48E3257E5450002675A2 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		D55EE2BF269575AC00303A9D /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		D562AEDF2594ADE7006F670D /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		D5823BF3259A5DA200C81EDE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		D5823C18259D0D4F00C81EDE /* Checkmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkmark.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D55EE2BE2695759D00303A9D /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				D55EE2BF269575AC00303A9D /* PageControl.swift */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		D5A8633D25AF8D2D009EE54D /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D55EE2BE2695759D00303A9D /* PageControl */,
 				D5FD89C02644506E00D17F07 /* Stopwatch */,
 				D5BFCB402637447E002ADA83 /* AudioButton */,
 				D55238F12628B3880061FF61 /* LikeButton */,
@@ -283,6 +294,7 @@
 				D5A8634325AF965D009EE54D /* UIScreenExtension.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 				D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */,
+				D55EE2C0269575AC00303A9D /* PageControl.swift in Sources */,
 				D55238F32628B3980061FF61 /* LikeButton.swift in Sources */,
 				D552388026277A1D0061FF61 /* RecButton.swift in Sources */,
 				D5FD89C4264450F100D17F07 /* Stopwatch.swift in Sources */,
