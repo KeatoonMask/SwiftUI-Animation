@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */; };
+		9F81678D2889B0960057BE2F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81678C2889B0960057BE2F /* TestView.swift */; };
 		D503106E260BBB06001C6434 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503106D260BBB06001C6434 /* PasswordField.swift */; };
 		D552388026277A1D0061FF61 /* RecButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552387F26277A1D0061FF61 /* RecButton.swift */; };
 		D55238F32628B3980061FF61 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55238F22628B3980061FF61 /* LikeButton.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallButton.swift; sourceTree = "<group>"; };
+		9F81678C2889B0960057BE2F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		D503106D260BBB06001C6434 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		D552387F26277A1D0061FF61 /* RecButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecButton.swift; sourceTree = "<group>"; };
 		D55238F22628B3980061FF61 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F8167892889ACAC0057BE2F /* PhoneCall */ = {
+			isa = PBXGroup;
+			children = (
+				9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */,
+				9F81678C2889B0960057BE2F /* TestView.swift */,
+			);
+			path = PhoneCall;
+			sourceTree = "<group>";
+		};
 		9F9D3D6A2889A8FB00BA8459 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +196,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				9F8167892889ACAC0057BE2F /* PhoneCall */,
 				D55EE2BE2695759D00303A9D /* PageControl */,
 				D5FD89C02644506E00D17F07 /* Stopwatch */,
 				D5BFCB402637447E002ADA83 /* AudioButton */,
@@ -283,11 +297,13 @@
 			files = (
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
 				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
+				9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */,
 				D5A8634325AF965D009EE54D /* UIScreenExtension.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 				D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */,
 				D55EE2C0269575AC00303A9D /* PageControl.swift in Sources */,
 				D55238F32628B3980061FF61 /* LikeButton.swift in Sources */,
+				9F81678D2889B0960057BE2F /* TestView.swift in Sources */,
 				D552388026277A1D0061FF61 /* RecButton.swift in Sources */,
 				D5FD89C4264450F100D17F07 /* Stopwatch.swift in Sources */,
 				D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */,
