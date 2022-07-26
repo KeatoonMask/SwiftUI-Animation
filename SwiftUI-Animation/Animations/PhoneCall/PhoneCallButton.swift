@@ -11,6 +11,10 @@ struct PhoneCallButton: View {
     
     let size: CGFloat
     
+    private var doubleSize: CGFloat { size * 2.0 }
+    
+    private var expandedSize: CGFloat { size * 2.6363 }
+    
     @State private var isRing: Bool = true
     @State private var ringing = false
     
@@ -21,14 +25,14 @@ struct PhoneCallButton: View {
         ZStack {
             Circle()
                 .fill(.gray)
-                .frame(width: 80, height: 80)
+                .frame(width: doubleSize, height: doubleSize)
                 .scaleEffect(ringing ? 1 : 0.5)
                 .opacity(ringing ? 0.3 : 0)
             
             RoundedRectangle(cornerRadius: 100.0)
                 .fill(isRing ? .black : .red)
-                .frame(width: isRing ? size : (size * 2) + 30, height: size)
-                .shadow(color: shadowColor, radius: 10, x: 0, y: 8)
+                .frame(width: isRing ? size : expandedSize, height: size)
+                .shadow(color: shadowColor, radius: 5, x: 0, y: 8)
                 .animation(.linear)
             
             Button(action: {
@@ -37,14 +41,14 @@ struct PhoneCallButton: View {
                 HStack {
                     if !isRing {
                         Text("END")
-                            .font(.system(size: 22, weight: .bold))
+                            .font(.system(size: size * 0.5, weight: .bold))
                             .foregroundColor(.white)
                             .animation(.linear)
                     }
                     
                     Image(systemName: "phone.down.fill")
                         .resizable()
-                        .frame(width: 28, height: 12)
+                        .frame(width: size * 0.636363, height: size * 0.272727)
                         .foregroundColor(.white)
                         .rotationEffect(phoneDegrees)
                         .animation(.linear)
@@ -52,7 +56,7 @@ struct PhoneCallButton: View {
             })
             .onChange(of: isRing) { newValue in
                 withAnimation(.linear(duration: 0.3)) {
-                    shadowColor = newValue ? .clear : .gray
+                    shadowColor = newValue ? .clear : clearGray
                     phoneDegrees = newValue ? .degrees(0) : .degrees(130)
                     animateRing()
                 }

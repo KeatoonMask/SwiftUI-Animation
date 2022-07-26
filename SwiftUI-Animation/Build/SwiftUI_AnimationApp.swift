@@ -14,13 +14,7 @@ struct SwiftUI_AnimationApp: App {
             ZStack {
                 //darkGray.edgesIgnoringSafeArea(.all)
 
-                VStack {
-                    Spacer()
-
-                    PageControlPreview()
-
-                    Spacer()
-                }
+                PhoneCallButton(size: 44.0)
 
             }
         }
