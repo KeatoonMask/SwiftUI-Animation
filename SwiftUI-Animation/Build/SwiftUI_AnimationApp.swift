@@ -12,9 +12,9 @@ struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                //darkGray.edgesIgnoringSafeArea(.all)
+                darkGray.edgesIgnoringSafeArea(.all)
 
-                PhoneCallButton(size: 44.0)
+                PhoneCallButton(size: 60)
 
             }
         }
