@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */; };
 		9F8177AD289AFFCA00670E1E /* TypingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8177AC289AFFCA00670E1E /* TypingIcon.swift */; };
+		9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC075028C79FDA0076E402 /* ReactionView.swift */; };
 		D503106E260BBB06001C6434 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503106D260BBB06001C6434 /* PasswordField.swift */; };
 		D552388026277A1D0061FF61 /* RecButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552387F26277A1D0061FF61 /* RecButton.swift */; };
 		D55238F32628B3980061FF61 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55238F22628B3980061FF61 /* LikeButton.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallButton.swift; sourceTree = "<group>"; };
 		9F8177AC289AFFCA00670E1E /* TypingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIcon.swift; sourceTree = "<group>"; };
+		9FCC075028C79FDA0076E402 /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 		D503106D260BBB06001C6434 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		D552387F26277A1D0061FF61 /* RecButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecButton.swift; sourceTree = "<group>"; };
 		D55238F22628B3980061FF61 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			children = (
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FCC074F28C79FC70076E402 /* ReactionView */ = {
+			isa = PBXGroup;
+			children = (
+				9FCC075028C79FDA0076E402 /* ReactionView.swift */,
+			);
+			path = ReactionView;
 			sourceTree = "<group>";
 		};
 		D503106C260BBAF0001C6434 /* PasswordField */ = {
@@ -203,6 +213,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC074F28C79FC70076E402 /* ReactionView */,
 				9F8177A9289AFFAB00670E1E /* TypingIcon */,
 				9F8167892889ACAC0057BE2F /* PhoneCall */,
 				D55EE2BE2695759D00303A9D /* PageControl */,
@@ -304,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
+				9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */,
 				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
 				9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */,
 				D5A8634325AF965D009EE54D /* UIScreenExtension.swift in Sources */,
