@@ -9,23 +9,67 @@ import SwiftUI
 
 struct ReactionView: View {
 
+    var iconSize: CGFloat
     @State private var showReaction = false
+
+    private let animation: Animation = .interpolatingSpring(mass: 0.5, stiffness: 100, damping: 6)
 
     var body: some View {
         ZStack {
-            Image(uiImage: "❤️".textToImage())
-                .scaleEffect(showReaction ? 1 : 0, anchor: .bottomLeading)
-                .animation(.interpolatingSpring(mass: 0.5, stiffness: 100, damping: 5), value: showReaction)
+            RoundedRectangle(cornerRadius: 20)
+                .fill(darkGray)
+                .frame(width: iconSize * 5 + 140, height: iconSize + 30)
+                .scaleEffect(showReaction ? 1 : 0, anchor: .center)
+                .animation(.interpolatingSpring(mass: 0.5, stiffness: 100, damping: 10), value: showReaction)
+
+            HStack(spacing: 20) {
+                Image(uiImage: "👍".textToImage())
+                    .rotationEffect(.degrees(showReaction ? 0 : -45))
+                    .scaleEffect(showReaction ? 1 : 0, anchor: .bottomLeading)
+                    .animation(animation.delay(0.3), value: showReaction)
+
+                Image(uiImage: "👎".textToImage())
+                    .rotationEffect(.degrees(showReaction ? 0 : -45))
+                    .scaleEffect(showReaction ? 1 : 0, anchor: .bottomLeading)
+                    .animation(animation.delay(0.3), value: showReaction)
+
+                Image(uiImage: "❤️".textToImage())
+                    .scaleEffect(showReaction ? 1 : 0, anchor: .bottomLeading)
+                    .animation(animation.delay(0.3), value: showReaction)
+
+                Image(uiImage: "😂".textToImage())
+                    .offset(x: showReaction ? 0 : 40)
+                    .scaleEffect(showReaction ? 1 : 0, anchor: .bottomLeading)
+                    .animation(animation.delay(0.3), value: showReaction)
+
+                ReactionIconView(icon: "😠", show: $showReaction)
+            }
+            .onAppear{
+                showReaction.toggle()
         }
-        .onAppear{
-            showReaction.toggle()
         }
+    }
+}
+
+struct ReactionIconView: View {
+
+    var icon: String
+    @Binding var show: Bool
+
+    private var iconImage: UIImage { icon.textToImage() }
+    private let animation: Animation = .interpolatingSpring(mass: 0.5, stiffness: 100, damping: 6)
+
+    var body: some View {
+        Image(uiImage: iconImage)
+            .offset(x: show ? 0 : 40)
+            .scaleEffect(show ? 1 : 0, anchor: .bottomLeading)
+            .animation(animation.delay(0.3), value: show)
     }
 }
 
 struct ReactionView_Previews: PreviewProvider {
     static var previews: some View {
-        ReactionView()
+        ReactionView(iconSize: 44)
     }
 }
 
