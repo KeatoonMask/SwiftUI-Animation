@@ -10,6 +10,7 @@
 		9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */; };
 		9F8177AD289AFFCA00670E1E /* TypingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8177AC289AFFCA00670E1E /* TypingIcon.swift */; };
 		9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC075028C79FDA0076E402 /* ReactionView.swift */; };
+		9FF5DF5D28D0EF7300A420E8 /* String+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5DF5C28D0EF7300A420E8 /* String+Additional.swift */; };
 		D503106E260BBB06001C6434 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503106D260BBB06001C6434 /* PasswordField.swift */; };
 		D552388026277A1D0061FF61 /* RecButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552387F26277A1D0061FF61 /* RecButton.swift */; };
 		D55238F32628B3980061FF61 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55238F22628B3980061FF61 /* LikeButton.swift */; };
@@ -31,6 +32,7 @@
 		9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallButton.swift; sourceTree = "<group>"; };
 		9F8177AC289AFFCA00670E1E /* TypingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIcon.swift; sourceTree = "<group>"; };
 		9FCC075028C79FDA0076E402 /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
+		9FF5DF5C28D0EF7300A420E8 /* String+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additional.swift"; sourceTree = "<group>"; };
 		D503106D260BBB06001C6434 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		D552387F26277A1D0061FF61 /* RecButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecButton.swift; sourceTree = "<group>"; };
 		D55238F22628B3980061FF61 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 				9FCC075028C79FDA0076E402 /* ReactionView.swift */,
 			);
 			path = ReactionView;
+			sourceTree = "<group>";
+		};
+		9FF5DF5B28D0EF0B00A420E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FF5DF5C28D0EF7300A420E8 /* String+Additional.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D503106C260BBAF0001C6434 /* PasswordField */ = {
@@ -205,6 +215,7 @@
 			children = (
 				D5D530D1258B806D006F20B6 /* Build */,
 				D5F0B61B256DAA3E003429E4 /* Animations */,
+				9FF5DF5B28D0EF0B00A420E8 /* Extensions */,
 				D55C48E2257E542B002675A2 /* Helpers */,
 			);
 			path = "SwiftUI-Animation";
@@ -315,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
+				9FF5DF5D28D0EF7300A420E8 /* String+Additional.swift in Sources */,
 				9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */,
 				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
 				9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */,

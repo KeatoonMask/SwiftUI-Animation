@@ -11,8 +11,7 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            TypingIcon()
-                .frame(width: 100, height: 100)
+            ReactionViewContainer()
         }
     }
 }
