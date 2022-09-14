@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */; };
 		9F8177AD289AFFCA00670E1E /* TypingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8177AC289AFFCA00670E1E /* TypingIcon.swift */; };
+		9FA7D7EE28D228A00081125D /* AnimationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7ED28D228A00081125D /* AnimationData.swift */; };
+		9FA7D7F028D228DB0081125D /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7EF28D228DB0081125D /* AnimationCell.swift */; };
+		9FA7D7F228D22DA90081125D /* AnimationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7F128D22DA90081125D /* AnimationListView.swift */; };
+		9FA7D7F428D22DC50081125D /* AnimationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7F328D22DC50081125D /* AnimationList.swift */; };
 		9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC075028C79FDA0076E402 /* ReactionView.swift */; };
 		9FF5DF5D28D0EF7300A420E8 /* String+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5DF5C28D0EF7300A420E8 /* String+Additional.swift */; };
 		D503106E260BBB06001C6434 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503106D260BBB06001C6434 /* PasswordField.swift */; };
@@ -31,6 +35,10 @@
 /* Begin PBXFileReference section */
 		9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallButton.swift; sourceTree = "<group>"; };
 		9F8177AC289AFFCA00670E1E /* TypingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIcon.swift; sourceTree = "<group>"; };
+		9FA7D7ED28D228A00081125D /* AnimationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationData.swift; sourceTree = "<group>"; };
+		9FA7D7EF28D228DB0081125D /* AnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
+		9FA7D7F128D22DA90081125D /* AnimationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListView.swift; sourceTree = "<group>"; };
+		9FA7D7F328D22DC50081125D /* AnimationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationList.swift; sourceTree = "<group>"; };
 		9FCC075028C79FDA0076E402 /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 		9FF5DF5C28D0EF7300A420E8 /* String+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additional.swift"; sourceTree = "<group>"; };
 		D503106D260BBB06001C6434 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
@@ -84,6 +92,24 @@
 			children = (
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FA7D7E928D228310081125D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9FA7D7EF28D228DB0081125D /* AnimationCell.swift */,
+				9FA7D7F128D22DA90081125D /* AnimationListView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9FA7D7EC28D228880081125D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FA7D7ED28D228A00081125D /* AnimationData.swift */,
+				9FA7D7F328D22DC50081125D /* AnimationList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9FCC074F28C79FC70076E402 /* ReactionView */ = {
@@ -213,6 +239,8 @@
 		D5F0B60A256DAA10003429E4 /* SwiftUI-Animation */ = {
 			isa = PBXGroup;
 			children = (
+				9FA7D7E928D228310081125D /* Main */,
+				9FA7D7EC28D228880081125D /* Model */,
 				D5D530D1258B806D006F20B6 /* Build */,
 				D5F0B61B256DAA3E003429E4 /* Animations */,
 				9FF5DF5B28D0EF0B00A420E8 /* Extensions */,
@@ -340,9 +368,13 @@
 				9F8177AD289AFFCA00670E1E /* TypingIcon.swift in Sources */,
 				D55BE46625862F6A0098598D /* DownloadButton.swift in Sources */,
 				D5823BF4259A5DA200C81EDE /* ProgressBar.swift in Sources */,
+				9FA7D7F428D22DC50081125D /* AnimationList.swift in Sources */,
+				9FA7D7F028D228DB0081125D /* AnimationCell.swift in Sources */,
 				D5BFCB422637448B002ADA83 /* AudioButton.swift in Sources */,
 				D5823C19259D0D4F00C81EDE /* Checkmark.swift in Sources */,
+				9FA7D7F228D22DA90081125D /* AnimationListView.swift in Sources */,
 				D503106E260BBB06001C6434 /* PasswordField.swift in Sources */,
+				9FA7D7EE28D228A00081125D /* AnimationData.swift in Sources */,
 				D5A8633F25AF8D5F009EE54D /* MusicPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
