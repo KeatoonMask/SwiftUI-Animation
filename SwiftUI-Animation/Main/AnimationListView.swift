@@ -14,7 +14,7 @@ struct AnimationListView: View {
     var body: some View {
         NavigationView {
             List(animations) { animation in
-                NavigationLink(destination: Spinner()) {
+                NavigationLink(destination: AnimationView(view: animation.view)) {
                     AnimationCell(animation: animation)
                 }
             }
@@ -23,11 +23,29 @@ struct AnimationListView: View {
     }
 }
 
+struct AnimationView: View {
+
+    var view: String
+    
+    var body: some View {
+        switch view {
+        case "Spinner":
+            return AnyView(Spinner())
+        case "Progress":
+            return AnyView(ProgressBarContentView())
+        case "Order":
+            return AnyView(OrderButton())
+        default:
+            return AnyView(Spinner())
+        }
+    }
+}
+
 struct AnimationListView_Previews: PreviewProvider {
     static var previews: some View {
         AnimationListView(animations: [AnimationData(id: 1, name: "Spinner", image: "🔁", view: "Spinner"),
-                                       AnimationData(id: 2, name: "Progress Bar", image: "📶", view: "Spinner"),
-                                       AnimationData(id: 3, name: "Order Button", image: "📦", view: "Spinner"),
+                                       AnimationData(id: 2, name: "Progress Bar", image: "📶", view: "Progress"),
+                                       AnimationData(id: 3, name: "Order Button", image: "📦", view: "Order"),
                                        AnimationData(id: 4, name: "Checkmark", image: "✅", view: "Spinner"),
                                        AnimationData(id: 5, name: "Password", image: "🫣", view: "Spinner")])
     }
