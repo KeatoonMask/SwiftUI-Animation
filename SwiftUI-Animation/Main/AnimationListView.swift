@@ -47,7 +47,15 @@ struct AnimationListView_Previews: PreviewProvider {
                                        AnimationData(id: 2, name: "Progress Bar", image: "📶", view: "Progress"),
                                        AnimationData(id: 3, name: "Order Button", image: "📦", view: "Order"),
                                        AnimationData(id: 4, name: "Checkmark", image: "✅", view: "Spinner"),
-                                       AnimationData(id: 5, name: "Password", image: "🫣", view: "Spinner")])
+                                       AnimationData(id: 5, name: "Password", image: "🫣", view: "Spinner"),
+                                       AnimationData(id: 6, name: "Rec", image: "🎙", view: "Spinner"),
+                                       AnimationData(id: 7, name: "Like", image: "❤️", view: "Spinner"),
+                                       AnimationData(id: 8, name: "Audio", image: "🔊", view: "Spinner"),
+                                       AnimationData(id: 9, name: "Stopwatch", image: "⏱", view: "Spinner"),
+                                       AnimationData(id: 10, name: "Pager", image: "⚫️", view: "Spinner"),
+                                       AnimationData(id: 11, name: "Phone Call", image: "📞", view: "Spinner"),
+                                       AnimationData(id: 12, name: "Typing", image: "💬", view: "Spinner"),
+                                       AnimationData(id: 13, name: "Reaction", image: "😂", view: "Spinner")])
     }
 }
 
