@@ -24,6 +24,6 @@ struct AnimationCell: View {
 
 struct AnimationCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnimationCell(animation: AnimationData(id: 1, name: "Spinner", image: "🔁", view: "Spinner"))
+        AnimationCell(animation: AnimationData(id: 1, name: "Spinner", image: "🔁", view: .spinner))
     }
 }

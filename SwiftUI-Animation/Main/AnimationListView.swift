@@ -9,11 +9,11 @@ import SwiftUI
 
 struct AnimationListView: View {
 
-    var animations: [AnimationData]
+    var animationList: AnimationList
 
     var body: some View {
         NavigationView {
-            List(animations) { animation in
+            List(animationList.animations) { animation in
                 NavigationLink(destination: AnimationView(view: animation.view)) {
                     AnimationCell(animation: animation)
                 }
@@ -25,37 +25,43 @@ struct AnimationListView: View {
 
 struct AnimationView: View {
 
-    var view: String
+    var view: AnimationViewType
     
     var body: some View {
         switch view {
-        case "Spinner":
+        case .spinner:
             return AnyView(Spinner())
-        case "Progress":
-            return AnyView(ProgressBarContentView())
-        case "Order":
+        case .download:
+            return AnyView(DownloadButton())
+        case .order:
             return AnyView(OrderButton())
-        default:
-            return AnyView(Spinner())
+        case .checkmark:
+            return AnyView(Checkmark())
+        case .password:
+            return AnyView(PasswordField())
+        case .rec:
+            return AnyView(RecButton())
+        case .like:
+            return AnyView(LikeButton())
+        case .audio:
+            return AnyView(AudioButton())
+        case .stopwatch:
+            return AnyView(Stopwatch())
+        case .page:
+            return AnyView(PageControlPreview())
+        case .phone:
+            return AnyView(PhoneCallButton(size: 44))
+        case .typing:
+            return AnyView(TypingIcon().frame(width: 150, height: 150))
+        case .reaction:
+            return AnyView(ReactionViewContainer())
         }
     }
 }
 
 struct AnimationListView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimationListView(animations: [AnimationData(id: 1, name: "Spinner", image: "🔁", view: "Spinner"),
-                                       AnimationData(id: 2, name: "Progress Bar", image: "📶", view: "Progress"),
-                                       AnimationData(id: 3, name: "Order Button", image: "📦", view: "Order"),
-                                       AnimationData(id: 4, name: "Checkmark", image: "✅", view: "Spinner"),
-                                       AnimationData(id: 5, name: "Password", image: "🫣", view: "Spinner"),
-                                       AnimationData(id: 6, name: "Rec", image: "🎙", view: "Spinner"),
-                                       AnimationData(id: 7, name: "Like", image: "❤️", view: "Spinner"),
-                                       AnimationData(id: 8, name: "Audio", image: "🔊", view: "Spinner"),
-                                       AnimationData(id: 9, name: "Stopwatch", image: "⏱", view: "Spinner"),
-                                       AnimationData(id: 10, name: "Pager", image: "⚫️", view: "Spinner"),
-                                       AnimationData(id: 11, name: "Phone Call", image: "📞", view: "Spinner"),
-                                       AnimationData(id: 12, name: "Typing", image: "💬", view: "Spinner"),
-                                       AnimationData(id: 13, name: "Reaction", image: "😂", view: "Spinner")])
+        AnimationListView(animationList: MockAnimationService().animationList())
     }
 }
 
