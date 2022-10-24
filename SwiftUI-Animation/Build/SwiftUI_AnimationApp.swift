@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ReactionViewContainer()
+            AnimationListView(animationList: MockAnimationService().animationList())
         }
     }
 }
