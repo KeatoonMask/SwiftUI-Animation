@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F139A51291D54A9005B20FA /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F139A50291D54A9005B20FA /* BatteryView.swift */; };
 		9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */; };
 		9F8177AD289AFFCA00670E1E /* TypingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8177AC289AFFCA00670E1E /* TypingIcon.swift */; };
 		9FA7D7EE28D228A00081125D /* AnimationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7ED28D228A00081125D /* AnimationData.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F139A50291D54A9005B20FA /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		9F81678A2889ACBE0057BE2F /* PhoneCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallButton.swift; sourceTree = "<group>"; };
 		9F8177AC289AFFCA00670E1E /* TypingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIcon.swift; sourceTree = "<group>"; };
 		9FA7D7ED28D228A00081125D /* AnimationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationData.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F139A4D291D5487005B20FA /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				9F139A50291D54A9005B20FA /* BatteryView.swift */,
+			);
+			path = Battery;
+			sourceTree = "<group>";
+		};
 		9F8167892889ACAC0057BE2F /* PhoneCall */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +276,7 @@
 		D5F0B61B256DAA3E003429E4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				9F139A4D291D5487005B20FA /* Battery */,
 				9FCC074F28C79FC70076E402 /* ReactionView */,
 				9F8177A9289AFFAB00670E1E /* TypingIcon */,
 				9F8167892889ACAC0057BE2F /* PhoneCall */,
@@ -375,6 +386,7 @@
 				D5A8634325AF965D009EE54D /* UIScreenExtension.swift in Sources */,
 				D5F0B60C256DAA10003429E4 /* SwiftUI_AnimationApp.swift in Sources */,
 				D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */,
+				9F139A51291D54A9005B20FA /* BatteryView.swift in Sources */,
 				9FB5C7C328EDEE7D00B3D595 /* MockAnimationService.swift in Sources */,
 				9FB5C7C528EDEFA800B3D595 /* AnimationService.swift in Sources */,
 				D55EE2C0269575AC00303A9D /* PageControl.swift in Sources */,
