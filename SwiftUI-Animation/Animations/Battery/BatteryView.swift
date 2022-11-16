@@ -10,39 +10,33 @@ import SwiftUI
 struct BatteryView: View {
 
     @Binding public var isCharging: Bool
+
     public let width: CGFloat
+    private var height: CGFloat { width / 3 }
 
-    private var height: CGFloat { width * 0.333 }
-
-    private var batteryWidth: CGFloat {
-        width * 0.725
-    }
-
+    private var minBatt: CGFloat { width * 0.1 }
+    private var maxBatt: CGFloat { width * 0.75 }
     private var batteryMargin: CGFloat { width * 0.6 }
 
-    private var batteryOffset: CGFloat { -width * 0.055 }
+    private var componentOffset: CGFloat { -width * 0.055 }
 
 
     var body: some View {
         VStack {
-
-            Image(systemName: "battery.100.bolt")
-                .resizable()
-                .frame(width: width, height: height)
-
             ZStack {
                 Image(systemName: "battery.0")
                     .resizable()
-                    .frame(width: width, height: width / 3)
+                    .frame(width: width, height: height)
 
                 HStack {
                     Spacer()
                         .frame(width: batteryMargin)
 
                     RoundedRectangle(cornerRadius: 16.0)
-                        .frame(width: isCharging ? width * 0.75 : width * 0.1, height: (width / 3) * 0.65)
-                        .animation(.linear(duration: 2.5))
-                        .offset(x: batteryOffset)
+                        .frame(width: isCharging ? maxBatt : minBatt, height: height * 0.65)
+                        .foregroundColor(isCharging ? .green : .red)
+                        .animation(.easeOut(duration: 2.5))
+                        .offset(x: componentOffset)
 
                     Spacer()
                 }
@@ -50,6 +44,7 @@ struct BatteryView: View {
                 BoltView(size: width)
                     .opacity(isCharging ? 1.0 : 0.0)
                     .animation(.linear(duration: 0.3))
+                    .offset(x: componentOffset)
             }
         }
     }
@@ -79,25 +74,30 @@ struct BoltView: View {
 }
 
 struct BatteryViewContainer: View {
-    @State private var percentage: CGFloat = 0.4
     @State private var isCharging = false
 
     var body: some View {
-        VStack {
+        VStack(spacing: 40) {
             BatteryView(isCharging: $isCharging, width: 200)
 
             Button(action: {
                 isCharging.toggle()
             }, label: {
-                HStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 30.0)
+                        .foregroundColor(.black)
+                        .frame(height: 56)
+                        .padding(.horizontal, 80)
+                        .shadow(radius: 5)
 
-                    RoundedRectangle(cornerRadius: 16.0)
-                        .frame(height: 44)
+                    Text("CHARGE")
+                        .font(.system(size: 34, weight: .light))
+                        .foregroundColor(.white)
                 }
             })
         }
     }
-}
+}  
 
 struct BatteryView_Previews: PreviewProvider {
     static var previews: some View {
