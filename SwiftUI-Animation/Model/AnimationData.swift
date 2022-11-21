@@ -22,6 +22,7 @@ enum AnimationViewType {
     case phone
     case typing
     case reaction
+    case battery
 }
 struct AnimationData: Identifiable {
     var id: Int

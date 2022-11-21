@@ -55,6 +55,8 @@ struct AnimationView: View {
             return AnyView(TypingIcon().frame(width: 150, height: 150))
         case .reaction:
             return AnyView(ReactionViewContainer())
+        case .battery:
+            return AnyView(BatteryViewContainer())
         }
     }
 }

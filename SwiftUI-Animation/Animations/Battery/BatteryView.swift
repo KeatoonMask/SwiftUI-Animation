@@ -11,6 +11,9 @@ struct BatteryView: View {
 
     @Binding public var isCharging: Bool
 
+    @State private var progress: CGFloat = 0
+    @State private var batteryColor: Color = .red
+
     public let width: CGFloat
     private var height: CGFloat { width / 3 }
 
@@ -32,9 +35,8 @@ struct BatteryView: View {
                         .frame(width: batteryMargin)
 
                     RoundedRectangle(cornerRadius: 16.0)
-                        .frame(width: isCharging ? maxBatt : minBatt, height: height * 0.65)
-                        .foregroundColor(isCharging ? .green : .red)
-                        .animation(.easeOut(duration: 3))
+                        .frame(width: progress, height: height * 0.65)
+                        .foregroundColor(batteryColor)
                         .offset(x: componentOffset)
 
                     Spacer()
@@ -44,6 +46,12 @@ struct BatteryView: View {
                     .opacity(isCharging ? 1.0 : 0.0)
                     .animation(.linear(duration: 0.4))
                     .offset(x: componentOffset)
+            }
+            .onChange(of: self.isCharging) { newValue in
+                withAnimation(.easeOut(duration: 3)) {
+                    progress = newValue ? maxBatt : minBatt
+                    batteryColor = newValue ? .green : .red
+                }
             }
         }
     }

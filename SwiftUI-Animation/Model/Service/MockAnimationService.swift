@@ -23,7 +23,8 @@ class MockAnimationService: AnimationService {
         AnimationData(id: 10, name: "Page Control", image: "⚫️", view: .page),
         AnimationData(id: 11, name: "Phone Call", image: "📞", view: .phone),
         AnimationData(id: 12, name: "Typing", image: "💬", view: .typing),
-        AnimationData(id: 13, name: "Reaction", image: "😂", view: .reaction)
+        AnimationData(id: 13, name: "Reaction", image: "😂", view: .reaction),
+        AnimationData(id: 14, name: "Battery", image: "🔋", view: .battery)
     ]
 
     func animationList() -> AnimationList {
