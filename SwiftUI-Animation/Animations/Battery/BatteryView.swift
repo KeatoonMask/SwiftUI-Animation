@@ -20,7 +20,6 @@ struct BatteryView: View {
 
     private var componentOffset: CGFloat { -width * 0.055 }
 
-
     var body: some View {
         VStack {
             ZStack {
@@ -35,7 +34,7 @@ struct BatteryView: View {
                     RoundedRectangle(cornerRadius: 16.0)
                         .frame(width: isCharging ? maxBatt : minBatt, height: height * 0.65)
                         .foregroundColor(isCharging ? .green : .red)
-                        .animation(.easeOut(duration: 2.5))
+                        .animation(.easeOut(duration: 3))
                         .offset(x: componentOffset)
 
                     Spacer()
@@ -43,7 +42,7 @@ struct BatteryView: View {
 
                 BoltView(size: width)
                     .opacity(isCharging ? 1.0 : 0.0)
-                    .animation(.linear(duration: 0.3))
+                    .animation(.linear(duration: 0.4))
                     .offset(x: componentOffset)
             }
         }
@@ -80,21 +79,15 @@ struct BatteryViewContainer: View {
         VStack(spacing: 40) {
             BatteryView(isCharging: $isCharging, width: 200)
 
-            Button(action: {
-                isCharging.toggle()
-            }, label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 30.0)
-                        .foregroundColor(.black)
-                        .frame(height: 56)
-                        .padding(.horizontal, 80)
-                        .shadow(radius: 5)
+            VStack(spacing: 10) {
+                Toggle(isOn: $isCharging){}
+                    .toggleStyle(CustomToggleStyle())
 
-                    Text("CHARGE")
-                        .font(.system(size: 34, weight: .light))
-                        .foregroundColor(.white)
-                }
-            })
+                Text("CHARGE")
+                    .font(.system(size:15))
+                    .fontWeight(.light)
+                    .foregroundColor(.black)
+            }
         }
     }
 }  

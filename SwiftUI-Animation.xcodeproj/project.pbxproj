@@ -14,6 +14,8 @@
 		9FA7D7F028D228DB0081125D /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7EF28D228DB0081125D /* AnimationCell.swift */; };
 		9FA7D7F228D22DA90081125D /* AnimationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7F128D22DA90081125D /* AnimationListView.swift */; };
 		9FA7D7F428D22DC50081125D /* AnimationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7D7F328D22DC50081125D /* AnimationList.swift */; };
+		9FAEC3DD2926A9000069A733 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAEC3DC2926A9000069A733 /* CustomToggle.swift */; };
+		9FAEC3DF2926A9550069A733 /* Color+Adittional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAEC3DE2926A9540069A733 /* Color+Adittional.swift */; };
 		9FB5C7C328EDEE7D00B3D595 /* MockAnimationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5C7C228EDEE7D00B3D595 /* MockAnimationService.swift */; };
 		9FB5C7C528EDEFA800B3D595 /* AnimationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5C7C428EDEFA800B3D595 /* AnimationService.swift */; };
 		9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC075028C79FDA0076E402 /* ReactionView.swift */; };
@@ -43,6 +45,8 @@
 		9FA7D7EF28D228DB0081125D /* AnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
 		9FA7D7F128D22DA90081125D /* AnimationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListView.swift; sourceTree = "<group>"; };
 		9FA7D7F328D22DC50081125D /* AnimationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationList.swift; sourceTree = "<group>"; };
+		9FAEC3DC2926A9000069A733 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
+		9FAEC3DE2926A9540069A733 /* Color+Adittional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Adittional.swift"; sourceTree = "<group>"; };
 		9FB5C7C228EDEE7D00B3D595 /* MockAnimationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAnimationService.swift; sourceTree = "<group>"; };
 		9FB5C7C428EDEFA800B3D595 /* AnimationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationService.swift; sourceTree = "<group>"; };
 		9FCC075028C79FDA0076E402 /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9FAEC3DB2926A8E90069A733 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9FAEC3DC2926A9000069A733 /* CustomToggle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		9FB5C7C128EDEE2F00B3D595 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF5DF5C28D0EF7300A420E8 /* String+Additional.swift */,
+				9FAEC3DE2926A9540069A733 /* Color+Adittional.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -265,10 +278,11 @@
 			children = (
 				9FA7D7E928D228310081125D /* Main */,
 				9FA7D7EC28D228880081125D /* Model */,
-				D5D530D1258B806D006F20B6 /* Build */,
+				9FAEC3DB2926A8E90069A733 /* Components */,
 				D5F0B61B256DAA3E003429E4 /* Animations */,
 				9FF5DF5B28D0EF0B00A420E8 /* Extensions */,
 				D55C48E2257E542B002675A2 /* Helpers */,
+				D5D530D1258B806D006F20B6 /* Build */,
 			);
 			path = "SwiftUI-Animation";
 			sourceTree = "<group>";
@@ -381,6 +395,7 @@
 				D5F0B61D256DAA4E003429E4 /* Spinner.swift in Sources */,
 				9FF5DF5D28D0EF7300A420E8 /* String+Additional.swift in Sources */,
 				9FCC075128C79FDA0076E402 /* ReactionView.swift in Sources */,
+				9FAEC3DD2926A9000069A733 /* CustomToggle.swift in Sources */,
 				D55C48E4257E5450002675A2 /* GlobalHelpers.swift in Sources */,
 				9F81678B2889ACBE0057BE2F /* PhoneCallButton.swift in Sources */,
 				D5A8634325AF965D009EE54D /* UIScreenExtension.swift in Sources */,
@@ -388,6 +403,7 @@
 				D562AEE02594ADE7006F670D /* OrderButton.swift in Sources */,
 				9F139A51291D54A9005B20FA /* BatteryView.swift in Sources */,
 				9FB5C7C328EDEE7D00B3D595 /* MockAnimationService.swift in Sources */,
+				9FAEC3DF2926A9550069A733 /* Color+Adittional.swift in Sources */,
 				9FB5C7C528EDEFA800B3D595 /* AnimationService.swift in Sources */,
 				D55EE2C0269575AC00303A9D /* PageControl.swift in Sources */,
 				D55238F32628B3980061FF61 /* LikeButton.swift in Sources */,
