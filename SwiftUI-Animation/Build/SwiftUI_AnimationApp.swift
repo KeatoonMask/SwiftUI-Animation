@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            AnimationListView(animationList: MockAnimationService().animationList())
+            //AnimationListView(animationList: MockAnimationService().animationList())
+            Checkmark()
+                .frame(width: 50, height: 50)
         }
     }
 }
