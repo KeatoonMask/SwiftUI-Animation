@@ -20,7 +20,7 @@ struct RecButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: geo.size.height / 2)
                     .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                    .fill(Color.white)
+                    .fill(Color.primaryColor)
 
                 RoundedRectangle(cornerRadius: cornerRadius(using: geo.size.width))
                     .fill(Color.red)
