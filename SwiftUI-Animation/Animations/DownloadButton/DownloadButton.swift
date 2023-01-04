@@ -24,32 +24,27 @@ struct DownloadButton: View {
     private var progressBarAnimationTime: TimeInterval = 2.4
 
     var body: some View {
-        ZStack {
-            darkGray
-                .edgesIgnoringSafeArea(.all)
-
-            VStack(spacing: 2) {
-                Text("Open file")
-                    .font(.title)
-                    .foregroundColor(darkBlue)
-                    .opacity((status == .finished) ? 1 : 0)
-                    .animation(.easeOut(duration: animationTime))
-
-                ZStack {
-                    ProgressBar(initialProgress: $progress, color: darkBlue)
-                        .frame(height: (status == .ready) ? 80 : 12)
-                        .animation(.easeIn(duration: animationTime))
-                    
-                    Text("Download")
-                        .font(.system(size: 26, weight: .bold))
-                        .foregroundColor(.white)
-                        .opacity((status == .ready) ? 1 : 0)
-                        .animation(.easeOut(duration: animationTime - 0.1))
-                }
-                .frame(width: (status == .finished) ? 150 : progressBarWidth)
-                .onTapGesture {
-                    download()
-                }
+        VStack(spacing: 2) {
+            Text("Open file")
+                .font(.title)
+                .foregroundColor(darkBlue)
+                .opacity((status == .finished) ? 1 : 0)
+                .animation(.easeOut(duration: animationTime))
+            
+            ZStack {
+                ProgressBar(initialProgress: $progress, color: darkBlue)
+                    .frame(height: (status == .ready) ? 80 : 12)
+                    .animation(.easeIn(duration: animationTime))
+                
+                Text("Download")
+                    .font(.system(size: 26, weight: .bold))
+                    .foregroundColor(.white)
+                    .opacity((status == .ready) ? 1 : 0)
+                    .animation(.easeOut(duration: animationTime - 0.1))
+            }
+            .frame(width: (status == .finished) ? 150 : progressBarWidth)
+            .onTapGesture {
+                download()
             }
         }
     }

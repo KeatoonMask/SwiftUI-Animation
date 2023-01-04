@@ -10,13 +10,12 @@ import SwiftUI
 struct PasswordField: View {
 
     @State private var password = "password"
-    @State private var showPassword = false
+    @State private var showPassword = true
     
     var body: some View {
-        GeometryReader { geo in
             ZStack {
-                RoundedRectangle(cornerRadius: 25.0)
-                    .frame(width: geo.size.width, height: 75, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                RoundedRectangle(cornerRadius: 50.0)
+                    .frame(width: 300, height: 75, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .foregroundColor(darkGray)
 
                 HStack {
@@ -25,7 +24,7 @@ struct PasswordField: View {
                     }
 
                     RoundedRectangle(cornerRadius: showPassword ? 25.0 : 50.0)
-                        .frame(width: showPassword ?  geo.size.width : 50, height: showPassword ?  75 : 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: showPassword ?  300 : 50, height: showPassword ?  75 : 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .animation(.linear(duration: 0.2))
                         .foregroundColor(clearGray)
                         .padding(.trailing, showPassword ? 0 : 12)
@@ -56,7 +55,6 @@ struct PasswordField: View {
                     }
                 }
             }
-        }
     }
 }
 

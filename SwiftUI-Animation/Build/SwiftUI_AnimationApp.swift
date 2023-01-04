@@ -12,8 +12,15 @@ struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
             //AnimationListView(animationList: MockAnimationService().animationList())
-            LikeButton()
-                .frame(width: 180, height: 100)
+            VStack {
+                Spacer()
+
+                PasswordField()
+                    .frame(width: 300)
+
+                Spacer()
+            }
+
         }
     }
 }

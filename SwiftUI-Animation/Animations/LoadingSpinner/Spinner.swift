@@ -24,21 +24,16 @@ struct Spinner: View {
 
     var body: some View {
         ZStack {
-            darkGray
-                .edgesIgnoringSafeArea(.all)
+            // S3
+            SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS3, color: darkViolet)
 
-            ZStack {
-                // S3
-                SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS3, color: darkViolet)
+            // S2
+            SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS2, color: darkPink)
 
-                // S2
-                SpinnerCircle(start: spinnerStart, end: spinnerEndS2S3, rotation: rotationDegreeS2, color: darkPink)
-
-                // S1
-                SpinnerCircle(start: spinnerStart, end: spinnerEndS1, rotation: rotationDegreeS1, color: darkBlue)
-
-            }.frame(width: 200, height: 200)
+            // S1
+            SpinnerCircle(start: spinnerStart, end: spinnerEndS1, rotation: rotationDegreeS1, color: darkBlue)
         }
+        .frame(width: 200, height: 200)
         .onAppear() {
             self.animateSpinner()
             Timer.scheduledTimer(withTimeInterval: animationTime, repeats: true) { (mainTimer) in

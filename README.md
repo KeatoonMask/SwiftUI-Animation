@@ -35,37 +35,42 @@ Installation is pretty simple:
 
 ## Animations
 
-#### Checkmark
+#### Spinner
 
-<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/checkmark.gif" height="240"/>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/spinner.gif" height="240"/>
 
-#### Rec button
-
-<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/recButton.gif" height="240"/>
-
-#### Like button
+#### Like
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/likeButton.gif" height="240"/>
 
-#### Loading Spinner
-* [Design](https://dribbble.com/shots/7888464-Spinner)
-* Tutorial: [SwiftUI Animations - Loading Spinner](https://ennes-finsi.medium.com/swiftui-animations-loading-spinner-2e01a3d8e9c0) 
-
-<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/loadingSpinner.gif" height="240"/>
-
 #### Download button
-* [Design](https://dribbble.com/shots/12636180-Download-button)
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/downloadButton.gif" height="240"/>
-
-#### Order button
-* [Inspired by](https://dribbble.com/shots/12636180-Download-button)
-
-<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/orderButton.gif" height="240"/>
 
 #### Password field
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/passwordField.gif"/>
+
+#### Checkmark
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/checkmark.gif" height="240"/>
+
+#### Order button
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/orderButton.gif" height="240"/>
+
+#### Rec
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/recButton.gif" height="240"/>
+
+#### Page control
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/pagecontrol.gif" height="240"/>
+
+#### Phone call
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/phonecall.gif" height="240"/>
+
 
 #### Stopwatch
 
