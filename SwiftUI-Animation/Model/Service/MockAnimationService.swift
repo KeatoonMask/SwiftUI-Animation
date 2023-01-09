@@ -18,12 +18,13 @@ class MockAnimationService: AnimationService {
         AnimationData(id: 5, name: "Checkmark", image: "✅", view: .checkmark),
         AnimationData(id: 6, name: "Order button", image: "📦", view: .order),
         AnimationData(id: 7, name: "Rec", image: "🎙", view: .rec),
+        AnimationData(id: 8, name: "Typing", image: "💬", view: .typing),
         AnimationData(id: 9, name: "Page Control", image: "⚫️", view: .page),
         AnimationData(id: 10, name: "Phone Call", image: "📞", view: .phone),
-        AnimationData(id: 12, name: "Typing", image: "💬", view: .typing),
+        AnimationData(id: 11, name: "Reaction", image: "😂", view: .reaction),
+        AnimationData(id: 12, name: "Battery", image: "🔋", view: .battery),
         AnimationData(id: 13, name: "Stopwatch", image: "⏱", view: .stopwatch),
-        AnimationData(id: 13, name: "Reaction", image: "😂", view: .reaction),
-        AnimationData(id: 14, name: "Battery", image: "🔋", view: .battery)
+
     ]
 
     func animationList() -> AnimationList {

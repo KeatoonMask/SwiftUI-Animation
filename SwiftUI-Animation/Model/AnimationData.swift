@@ -10,19 +10,19 @@ import SwiftUI
 
 enum AnimationViewType {
     case spinner
-    case download
-    case order
-    case checkmark
-    case password
-    case rec
     case like
-    case audio
-    case stopwatch
+    case download
+    case password
+    case checkmark
+    case order
+    case rec
+    case typing
     case page
     case phone
-    case typing
     case reaction
     case battery
+    case stopwatch
+    case audio
 }
 struct AnimationData: Identifiable {
     var id: Int

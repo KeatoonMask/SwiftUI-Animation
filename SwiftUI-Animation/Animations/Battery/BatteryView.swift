@@ -21,7 +21,8 @@ struct BatteryView: View {
     private var maxBatt: CGFloat { width * 0.75 }
     private var batteryMargin: CGFloat { width * 0.6 }
 
-    private var componentOffset: CGFloat { -width * 0.055 }
+    private var chargeOffset: CGFloat { -width * 0.09 }
+    private var boltOffset: CGFloat { -width * 0.055 }
 
     var body: some View {
         VStack {
@@ -37,7 +38,7 @@ struct BatteryView: View {
                     RoundedRectangle(cornerRadius: 16.0)
                         .frame(width: progress, height: height * 0.65)
                         .foregroundColor(batteryColor)
-                        .offset(x: componentOffset)
+                        .offset(x: chargeOffset)
 
                     Spacer()
                 }
@@ -45,7 +46,7 @@ struct BatteryView: View {
                 BoltView(size: width)
                     .opacity(isCharging ? 1.0 : 0.0)
                     .animation(.linear(duration: 0.4))
-                    .offset(x: componentOffset)
+                    .offset(x: boltOffset)
             }
             .onChange(of: self.isCharging) { newValue in
                 withAnimation(.easeOut(duration: 3)) {

@@ -35,12 +35,10 @@ struct Stopwatch: View {
                 StopwatchUnit(timeUnit: hours, timeUnitText: "HR", color: darkPink)
                 Text(":")
                     .font(.system(size: 48))
-                    .foregroundColor(.white)
                     .offset(y: -18)
                 StopwatchUnit(timeUnit: minutes, timeUnitText: "MIN", color: darkBlue)
                 Text(":")
                     .font(.system(size: 48))
-                    .foregroundColor(.white)
                     .offset(y: -18)
                 StopwatchUnit(timeUnit: seconds, timeUnitText: "SEC", color: darkGreen)
             }
@@ -120,17 +118,12 @@ struct StopwatchUnit: View {
             Text(timeUnitText)
                 .font(.system(size: 16))
         }
-        .foregroundColor(.white)
     }
 }
 
 struct Stopwatch_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            darkGray.edgesIgnoringSafeArea(.all)
-
-            Stopwatch()
-        }
+        Stopwatch()
     }
 }
 

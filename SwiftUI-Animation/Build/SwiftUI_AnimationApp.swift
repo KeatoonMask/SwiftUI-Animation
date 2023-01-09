@@ -11,16 +11,7 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            //AnimationListView(animationList: MockAnimationService().animationList())
-            VStack {
-                Spacer()
-
-                PasswordField()
-                    .frame(width: 300)
-
-                Spacer()
-            }
-
+            AnimationListView(animationList: MockAnimationService().animationList())
         }
     }
 }

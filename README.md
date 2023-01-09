@@ -63,6 +63,10 @@ Installation is pretty simple:
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/recButton.gif" height="340"/>
 
+#### Typing
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/typing.gif" height="340"/>
+
 #### Page control
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/pagecontrol.gif" height="340"/>
@@ -71,6 +75,13 @@ Installation is pretty simple:
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/phonecall.gif" height="340"/>
 
+#### Reaction
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/reaction.gif" height="340"/>
+
+#### Battery
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/battery.gif" height="340"/>
 
 #### Stopwatch
 
