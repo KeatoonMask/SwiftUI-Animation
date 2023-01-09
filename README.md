@@ -85,7 +85,7 @@ Installation is pretty simple:
 
 #### Stopwatch
 
-<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/stopwatch.gif"/>
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/stopwatch.gif" height="340"/>
 
 #### Music player
 
