@@ -9,24 +9,26 @@ import SwiftUI
 
 struct NavInteractionItem: View {
 
+    private let itemSize: CGFloat = 50
     private let animation: Animation = .interpolatingSpring(mass: 0.5, stiffness: 100, damping: 6)
     
-    @Binding var isSelected: Bool
+    @Binding
+    var isSelected: Bool
     var image: String
 
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 50)
-                .frame(width: isSelected ? 80 : 50, height: 50)
+                .frame(width: isSelected ? 80 : itemSize, height: itemSize)
                 .animation(animation, value: isSelected)
                 .foregroundColor(.white)
-                .opacity(isSelected ? 0.5 : 1)
+                .opacity(isSelected ? 0.3 : 1)
 
 
             Image(systemName: image)
                 .resizable()
-                .frame(width: 25, height: 25)
-                .foregroundColor(isSelected ? .white : .gray)
+                .frame(width: itemSize/2, height: itemSize/2)
+                .foregroundColor(isSelected ? .white : clearGray)
                 .animation(animation, value: isSelected)
         }
     }
@@ -34,11 +36,11 @@ struct NavInteractionItem: View {
 
 struct NavInteraction: View {
 
+    private let colors: [Color] = [darkBlue, darkPink, darkGreen, darkViolet]
+    private let image = ["person.fill", "magnifyingglass", "heart.fill", "gearshape.fill"]
+
     @State private var isSelected = [true, false, false, false]
     @State private var navColor = darkBlue
-
-    private var colors: [Color] = [darkBlue, darkPink, darkGray, darkViolet]
-    private var image = ["person.fill", "magnifyingglass", "heart.fill", "gearshape.fill"]
 
     var body: some View {
         ZStack {
@@ -50,7 +52,7 @@ struct NavInteraction: View {
                 ForEach(0..<4) { i in
                     NavInteractionItem(isSelected: $isSelected[i], image: image[i])
                         .onTapGesture {
-                            select(item: i)
+                            select(itemIndex: i)
                         }
                 }
             }
@@ -59,10 +61,11 @@ struct NavInteraction: View {
 
     }
 
-    func select(item: Int) {
-        navColor = colors[item]
-        isSelected = [false, false, false, false]
-        isSelected[item] = true
+    func select(itemIndex: Int) {
+        navColor = colors[itemIndex]
+        isSelected = isSelected.enumerated().map { (i, _) in
+            itemIndex == i
+        }
     }
 }
 
