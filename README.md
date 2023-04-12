@@ -67,6 +67,10 @@ Installation is pretty simple:
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/typing.gif" height="340"/>
 
+#### Nav Interaction
+
+<img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/navInteraction.gif" height="340"/>
+
 #### Page control
 
 <img src="https://raw.githubusercontent.com/KeatoonMask/SwiftUI-Animation/master/SwiftUI-Animation/Resources/pagecontrol.gif" height="340"/>
