@@ -11,7 +11,16 @@ import SwiftUI
 struct SwiftUI_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            AnimationListView(animationList: MockAnimationService().animationList())
+            ZStack {
+                darkGray.edgesIgnoringSafeArea(.all)
+
+                VStack {
+                    SearchBar()
+                        .padding(.top, 44)
+
+                    Spacer()
+                }
+            }
         }
     }
 }
